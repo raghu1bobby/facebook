@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
          attr_accessible :first_name, :last_name, :profile_name, :email, :password, :password_confirmation 
 
  has_many :statuses
+ has_many :user_friendships
+ has_many :friends, through: :user_friendships
 
  def gravatar_url 
     stripped_email = email.strip
