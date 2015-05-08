@@ -9,6 +9,8 @@ group :development, :test do
 	gem 'sqlite3'
 end
 
+gem 'pg'
+
 gem 'protected_attributes'
 gem 'simple_form'
 
